@@ -21,6 +21,8 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    //use 4 spaces indent
+    "indent": [2, 4, { "SwitchCase": 1 }],
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
