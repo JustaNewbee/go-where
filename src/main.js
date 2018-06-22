@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import './assets/normalize.css'
-import './assets/iconfont.css'
+import 'styles/normalize.css'
+import 'styles/iconfont.css'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

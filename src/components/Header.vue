@@ -4,8 +4,8 @@
             <span class="icon iconfont"></span>
         </div>
         <div class="header-search">
-            <!-- <input type="text"> -->
-            输入
+            <span class="icon iconfont"></span>
+            <input type="text" :placeholder="placeholder">
         </div>
         <div class="header-city">
             <span class="icon iconfont">城市</span>
@@ -15,7 +15,12 @@
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header',
+    data () {
+        return {
+            placeholder: '请输入'
+        }
+    }
 }
 </script>
 
@@ -31,8 +36,8 @@ export default {
             text-align: center;
         }
         .header-back {
-            float: left;
-            width: .64rem;
+            //float: left;
+            width: .86rem;
             .icon {
                 &:before {
                     content: "\e622";
@@ -41,15 +46,32 @@ export default {
         }
         .header-search {
             flex: 1;
-            border-radius: .1rem;
             height: .64rem;
+            line-height: .64rem;
             margin-top: .12rem;
-            margin-left: .2rem;
             background-color: $base-color;
+            border-radius: .1rem;
             color: $base-color-gray;
+            overflow: hidden;
+            input {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                border: none;
+                padding: 3px 12px 3px .64rem;
+                box-sizing: border-box;
+            }
+            .icon {
+                display: inline-block;
+                position: absolute;
+                width: .64rem;
+                &:before {
+                    content: "\e60d";
+                }
+            }
         }
         .header-city {
-            float: right;
+            //float: right;
             width: 1.24rem;
             text-align: center;
             .icon {
