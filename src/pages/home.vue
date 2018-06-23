@@ -1,6 +1,8 @@
 <template>
     <div class="home-page">
         <Header/>
+        <Swiper/>
+        <p>test</p>
     </div>
 </template>
 
@@ -16,6 +18,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

@@ -10,11 +10,11 @@ import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
-Vue.use(VueAwesomeSwiper, { })
-
-new Vue({
+Vue.use(VueAwesomeSwiper)
+let app = new Vue({
     el: '#app',
     router,
     components: { App },
     template: '<App/>'
 })
+Vue.use(app)
