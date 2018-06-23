@@ -6,7 +6,7 @@
 
 > npm install
 
-## use package
+## Use Package
 
 >node-sass
 >sass-loader
