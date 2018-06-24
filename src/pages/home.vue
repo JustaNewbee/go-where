@@ -1,19 +1,21 @@
 <template>
     <div class="home-page">
-        <Header/>
-        <Swiper/>
-        <p>test</p>
+        <go-header/>
+        <swiper/>
+        <icon-list/>
     </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
 import Swiper from '@/components/Swiper'
+import IconList from '@/components/IconList'
 export default {
     name: 'Home',
     components: {
-        Header,
-        Swiper
+        goHeader: Header,
+        swiper: Swiper,
+        iconList: IconList
     }
 }
 </script>
