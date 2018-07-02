@@ -98,7 +98,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     .icon-list {
         &-item {
             float: left;

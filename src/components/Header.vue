@@ -24,13 +24,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     .top-header {
         display: flex;
         height: .86rem;
         line-height: .86rem;
         background: $header-bg-color;
-        color: $base-color;
+        color: $color-white;
         .icon {
             display: block;
             text-align: center;
@@ -49,9 +49,9 @@ export default {
             height: .64rem;
             line-height: .64rem;
             margin-top: .12rem;
-            background-color: $base-color;
+            background-color: $color-white;
             border-radius: .1rem;
-            color: $base-color-gray;
+            color: $color-gray;
             overflow: hidden;
             input {
                 display: inline-block;

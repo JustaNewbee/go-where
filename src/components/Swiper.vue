@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     .swiper {
         width: 100%;
         height: 0;
@@ -57,13 +57,8 @@ export default {
             display: block;
             width: 100%;
         }
-    }
-</style>
-
-<style lang="scss">
-    .swiper {
         .swiper-pagination-bullet-active {
-            background-color: $base-color;
+            background-color: $color-white;
         }
-     }
+    }
 </style>

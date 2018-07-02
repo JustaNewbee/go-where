@@ -1,11 +1,15 @@
 $header-bg-color: #00bcd4;
-$base-color: #fff;
-$base-color-gray: #ccc;
 $load-bg-color: #eee;
+$color-white: #fff;
+$color-gray: #ccc;
+$color-gray-light: #f4f4f4;
 
 html {
     font-size: 50px;
 }
 body {
+    width: 100%;
+    height: 100%;
     font-size: .35rem;
+    background-color: $color-gray-light;
 }
