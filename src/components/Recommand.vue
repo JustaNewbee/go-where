@@ -11,9 +11,7 @@
                         <p class="title">白水洋</p>
                         <p class="star">XXXXX</p>
                         <p class="money">
-                            <span class="rmb">¥</span>
-                            <span class="pay">38</span>
-                            起
+                            <span class="rmb">¥</span><span class="pay">38</span>起
                         </p>
                         <p class="address">屏南县</p>
                     </div>
@@ -38,10 +36,10 @@ export default {
         .recommand-list {
             li a {
                 display: flex;
+                padding-bottom: 8px;
+                border-bottom: 1px $color-gray-light-more solid;
                 .item-img-wrapper {
-                    flex: 0 1 auto;
-                    width: 2rem;
-                    height: 2rem;
+                    flex: 0 1 2rem;
                     img {
                         display: block;
                         width: 100%;
@@ -49,13 +47,39 @@ export default {
                 }
                 .item-detail {
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
+                    flex-wrap: wrap;
                     flex: 1 1 auto;
+                    align-items: center;
+                    margin-left: 10px;
+                    color: $color-dark;
                     .title {
                         flex: 1 1 100%;
                     }
-                    .desc {
-
+                    .star {
+                        flex: 1 1 100%;
+                    }
+                    .money,
+                    .address {
+                        flex: 0 1 50%;
+                        font-size: .28rem;
+                        line-height: .28rem;
+                    }
+                    .money {
+                        .rmb,
+                        .pay {
+                            color: $color-orange;
+                        }
+                        .rmb {
+                            font-size: .24rem;
+                        }
+                        .pay {
+                            font-size: .4rem;
+                        }
+                    }
+                    .address {
+                        flex: 0 1 50%;
+                        text-align: right;
                     }
                 }
             }
