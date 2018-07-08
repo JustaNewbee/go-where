@@ -2,7 +2,7 @@
     <div class="recommand">
         <h2 class="recommand-title">猜你喜欢</h2>
         <ul class="recommand-list">
-            <li v-for="item of recommand_list" :key="item.recommand_id">
+            <li v-for="item of list" :key="item.recommand_id">
                 <a href="">
                     <div class="item-img-wrapper">
                         <img :src="item.recommand_img" alt="recommand img">
@@ -24,18 +24,8 @@
 <script>
 export default {
     name: 'recommand',
-    data () {
-        return {
-            recommand_list: [
-                {
-                    recommand_id: '001',
-                    recommand_title: '白水洋',
-                    recommand_pay: 38,
-                    recommand_address: '屏南县',
-                    recommand_img: 'http://img1.qunarzz.com/sight/p0/1707/45/4524631d448c1aea3.water.jpg_200x200_b7b204e1.jpg'
-                }
-            ]
-        }
+    props: {
+        list: Array
     }
 }
 </script>
@@ -49,11 +39,14 @@ export default {
         .recommand-list {
             li a {
                 display: flex;
-                padding-bottom: 8px;
+                padding-bottom: .16rem;
+                margin-bottom: .2rem;
                 border-bottom: 1px $color-gray-light-more solid;
                 .item-img-wrapper {
-                    flex: 0 1 1.5rem;
-                    min-width: 1.5rem;
+                    flex: 0 1 1.8rem;
+                    min-width: 1.8rem;
+                    height: 0;
+                    padding-bottom: 1.8rem;
                     img {
                         display: block;
                         width: 100%;

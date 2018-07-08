@@ -2,7 +2,7 @@
     <div class="weekend-travel">
         <h2>周末去哪儿</h2>
         <ul class="weekend-travel-list">
-            <li v-for="item of travel_list" :key="item.travel_id">
+            <li v-for="item of list" :key="item.travel_id">
                 <a href="#">
                     <div class="item-img-wrapper">
                         <img :src="item.travel_img" alt="weekend travel img">
@@ -20,29 +20,21 @@
 <script>
 export default {
     name: 'WeekendTravel',
-    data () {
-        return {
-            travel_list: [
-                {
-                    travel_id: '001',
-                    travel_title: '福州必游TOP10',
-                    travel_desc: '大美福州，必游之处',
-                    travel_img: 'http://img1.qunarzz.com/sight/source/1505/68/de862f94e383a6.jpg_r_640x214_f9df927b.jpg'
-                }
-            ]
-        }
+    props: {
+        list: Array
     }
 }
 </script>
 
 <style lang="scss">
     .weekend-travel {
-
         h2 {
-            padding: .3rem .3rem 0;
+            padding: 0 .3rem;
             margin-bottom: .4rem;
         }
         .item-img-wrapper {
+            height: 0;
+            padding-bottom: 37.09%;
             img {
                 display: block;
                 width: 100%;

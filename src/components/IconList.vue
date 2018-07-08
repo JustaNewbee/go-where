@@ -15,58 +15,14 @@
 <script>
 export default {
     name: 'IconList',
+    props: {
+        list: Array
+    },
     data () {
         return {
             swiperOption: {
 
-            },
-            iconList: [
-                {
-                    iconId: '01',
-                    iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                    iconName: '景点门票'
-                },
-                {
-                    iconId: '02',
-                    iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png',
-                    iconName: '水上玩乐'
-                },
-                {
-                    iconId: '03',
-                    iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
-                    iconName: '游乐场'
-                },
-                {
-                    iconId: '04',
-                    iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png',
-                    iconName: '自然风光'
-                },
-                {
-                    iconId: '05',
-                    iconUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                    iconName: '一日游'
-                },
-                {
-                    iconId: '06',
-                    iconUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-                    iconName: '福州必游'
-                },
-                {
-                    iconId: '07',
-                    iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png',
-                    iconName: '武夷山'
-                },
-                {
-                    iconId: '08',
-                    iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png',
-                    iconName: '海洋馆'
-                },
-                {
-                    iconId: '09',
-                    iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png',
-                    iconName: '水上玩乐'
-                }
-            ]
+            }
         }
     },
     computed: {
@@ -85,7 +41,7 @@ export default {
         // es6 method
         pages () {
             const pages = []
-            this.iconList.forEach((item, index) => {
+            this.list.forEach((item, index) => {
                 const page = Math.floor(index / 8)
                 if (!pages[page]) {
                     pages[page] = []
