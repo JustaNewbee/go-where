@@ -65,7 +65,10 @@ exports.cssLoaders = function (options) {
                loader: 'sass-resources-loader',
                options: {
                  // it need a absolute path
-                 resources: [resolveResouce('global.scss')]
+                 resources: [
+                    resolveResouce('global.scss'),
+                    resolveResouce('mixin.scss')
+                    ]
                }
            }
       ];
