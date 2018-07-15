@@ -1,6 +1,6 @@
 <template>
     <div class="home-page">
-        <go-header></go-header>
+        <go-header :city="city"></go-header>
         <swiper :list="swiperList"></swiper>
         <icon-list :list="iconList"></icon-list>
         <recommand-list :list="recommandList"></recommand-list>
@@ -37,6 +37,7 @@ export default {
             axios.get('/api/index.json').then(res => {
                 let resData = res.data
                 if (resData.ret && resData.data) {
+                    this.city = resData.data.city
                     this.swiperList = resData.data.swiperList
                     this.iconList = resData.data.iconList
                     this.recommandList = resData.data.recommandList

@@ -8,7 +8,7 @@
             <input type="text" :placeholder="placeholder">
         </div>
         <div class="header-city">
-            <span class="icon iconfont">城市</span>
+            <span class="icon iconfont">{{city}}</span>
         </div>
     </header>
 </template>
@@ -16,6 +16,9 @@
 <script>
 export default {
     name: 'Header',
+    props: {
+        city: String
+    },
     data () {
         return {
             placeholder: '请输入'
